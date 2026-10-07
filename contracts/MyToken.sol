@@ -1,6 +1,6 @@
 // Token : smart contract based 
 // BTC ,ETH,XRP,KAIA : native token
-// SPDX-License-Identifer: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
 contract MyToken {
