@@ -15,6 +15,8 @@ contract MyToken {
     uint256 public totalSupply;
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
+    
+
 
 
     constructor (string memory _name,string memory _symbol,uint8 _decimal,uint256 _amount) {
@@ -51,17 +53,7 @@ contract MyToken {
         emit Transfer(address(0),owner,amount);
     }
 
-    // function totalSupply() external view returns (uint256) {
-    //    return totalSupply;
-    //}
 
-    // function balanceOf(address owner) external view returns (uint256) {
-    //    return balanceOf[owner];
-    //}
-
-    // function name() external view returns (string memory) {
-    //    return name;
-    //}
     function transfer(uint256 amount,address to) external {
         require(balanceOf[msg.sender] >= amount,"insufficient balance");
         balanceOf[msg.sender] -= amount;
